@@ -1,0 +1,22 @@
+{% extends 'cars/base.html' %}
+
+{% block content %}
+<div class="register-form-container">
+    <h2 class="register-title">Login</h2>
+    <form method="post" enctype='multipart/form-data' class="register-form">
+        {% csrf_token %}
+        <div class="form-error">{{form.non_field_errors}}</div>
+        {% for f in form %}
+        <div class="register-form-group">
+            {{ f.label }}
+            {{ f }}
+        </div>
+        <div class="form-error">{{f.errors}}</div>
+        {% endfor %}
+        <button type="submit" class="register-btn">Login</button>
+    </form>
+    <div>
+        <p>Don't have account? <a href="{% url 'register' %}">register</a></p>
+    </div>
+</div>
+{% endblock %}

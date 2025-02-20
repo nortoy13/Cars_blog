@@ -1,0 +1,561 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.car-info-block{
+	margin-left: 20px;
+}
+html, body {
+	font-family: 'Arial';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	color: #161010;
+}
+.content{
+	min-height: 82vh;
+}
+nav ul li{
+	margin: 20px;
+}
+
+
+
+h1, h2,h3,h4,h5,h6 {
+	text-align: center;
+} 
+
+
+/* Sahifa konteyneri */
+.about-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Sarlavhalar */
+.about-title {
+    color: #0073e6;
+    text-align: center;
+}
+
+.about-subtitle {
+    color: #005bb5;
+    margin-top: 20px;
+}
+
+/* Matn */
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Ro‘yxatlar */
+.about-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-list li {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.about-list li::before {
+    content: "✅";
+    margin-right: 8px;
+}
+
+/* Aloqa bloki */
+.contact-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0073e6;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contact-info a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Umumiy navbar dizayni */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Menu ro‘yxati */
+.navbar-menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Havolalar dizayni */
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+}
+
+/* Login tugmasini ong tomonga surish */
+.navbar-right {
+    margin-left: auto;
+}
+
+/* Login tugmasi */
+.login-btn {
+    background-color: #007bff;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+	color: #007bff !important;
+}
+
+/* Responsive dizayn (mobil qurilmalar uchun) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .navbar-right {
+        margin-left: 0;
+    }
+}
+/* Umumiy kategoriya menu dizayni */
+.catmenu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+/* Kategoriyalar o‘rtasida bo‘shliq yaratish */
+.catmenu li {
+    margin-right: 25px;
+}
+
+/* Havola (link) dizayni */
+.catmenu li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effekt */
+.catmenu li a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Active (faol) holat */
+.catmenu li a.active {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Responsive dizayn (mobil qurilmalar uchun) */
+@media screen and (max-width: 768px) {
+    .catmenu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catmenu li {
+        margin-bottom: 15px;
+    }
+}
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+#footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color: #f7c800;
+}
+
+.cars-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px;
+}
+
+.cars-list{
+	margin: 20px 50px;
+}
+
+.cars-list li{ 
+	list-style: none;
+	padding: 0 140px;
+} 
+.car-item {
+    width: 100%; /* Make each car item full width */
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car-item:hover {
+    transform: translateY(-5px); /* Subtle hover effect */
+}
+
+.car-detail {
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+    padding: 20px;
+}
+
+.car-detail-block{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 150px;
+}
+.car-detail-block img{
+	width: 700px;
+}
+.car-detail-block h4 , h5{
+	font-size: 22px;
+	color: #333;
+}
+.car-detail-block p{
+	font-size: 18px;
+	color: #555;
+	font-family: sans-serif;
+}
+
+.car-photo-container {
+    width: 40%; /* Set image container width */
+}
+
+.car-photo {
+    width: 500px; /* Ensure the image takes up the full width of the container */
+    height: auto;
+    border-radius: 8px;
+}
+
+.car-info {
+    width: 60%; /* Remaining space for car info */
+    padding-left: 20px;
+}
+
+.car-info h4, .car-info h5 {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.car-info h4 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.car-info h5 {
+    font-size: 1.2em;
+    color: #777;
+    margin-top: 5px;
+}
+
+.car-description {
+    margin-top: 10px;
+    color: #555;
+    font-size: 0.9em;
+}
+
+.car-meta {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #999;
+}
+
+.read-more-container {
+    /* padding: 10px 20px; */
+    /* background-color: #f8f8f8; */
+    text-align: right;
+    /* border-top: 1px solid #eee; */
+}
+
+.read-more-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.read-more-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    text-decoration: none;
+}
+
+.form-container {
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+.form-wrapper {
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	width: 100%;
+	max-width: 600px;
+}
+
+.form-wrapper h2 {
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+/* Form Styles */
+.blog-form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	font-size: 14px;
+	color: #555;
+	margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+	transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+	border-color: #0066cc;
+}
+
+.form-group textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+.submit-btn {
+	background-color: #0066cc;
+	color: white;
+	padding: 12px 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+	background-color: #004d99;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+	.form-wrapper {
+		padding: 20px;
+	}
+
+	.submit-btn {
+		font-size: 14px;
+		padding: 10px 15px;
+	}
+}
+
+
+.list-pages{
+	text-align: center ;
+	margin: 0 0 20px 0;
+}
+.list-pages ul {
+	margin: 20px 0 0 0 ;
+	padding: 0;
+	list-style: none;
+}
+.list-pages ul li {
+	display: inline-block !important;
+	margin: 0 20px 0 0;
+}
+.list-pages a {
+	color: #000;
+	font-size: 24px;
+	text-decoration: none !important;
+}
+.list-pages .page-num, .page-num-selected {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	padding: 16px 0 0 0;
+	border: 1px solid #d0d0d0;
+	border-radius: 30px;
+}
+.list-pages .page-num:hover {
+	box-shadow: 3px 3px 1px #d0d0d0; 
+}
+.list-pages .page-num-selected {
+	border: none;
+	color: #000;
+	font-size: 20px;
+}
+.list-pages .page-num-selected:hover {
+	box-shadow: none; 
+}
+/* Registration Form Styling */
+.register-form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+.register-form-container p{
+	margin-top: 20px;
+}
+.register-form-container p a{
+	text-decoration: none;
+	color: #007bff;
+}
+
+/* Form Title */
+.register-title {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Form Group */
+.register-form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.register-form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.register-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.register-btn {
+    background: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.register-btn:hover {
+    background: #e0484d;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #e0484d;
+}

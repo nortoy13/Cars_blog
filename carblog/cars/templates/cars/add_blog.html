@@ -1,0 +1,26 @@
+{% extends 'cars/base.html' %}
+
+{% block content %}
+
+<div class="form-container">
+    <div class="form-wrapper">
+        <h2>Create a New Car Blog</h2>
+        <form method="post" enctype="multipart/form-data" class="blog-form">
+            {% csrf_token %}
+        <div class="form-error">{{form.non_field_errors}}</div>
+
+            {% for f in form %}
+            <div class="form-group">
+                <label for="f.id_for_label">{{f.label}}</label>
+                {{ f}}
+            </div>
+        <div class="form-error">{{f.errors}}</div>
+
+            {% endfor %}
+            
+            <button type="submit" class="submit-btn">Create</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

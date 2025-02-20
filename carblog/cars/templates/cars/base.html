@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+	<link type="text/css" href="{% static 'cars/css/styles.css' %}" rel="stylesheet" />
+
+</head>
+<body>
+    {% block mainmenu %}
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a {% if request.user.is_authenticated %} href="{% url 'newblog' %}" {%else%} href="{% url 'login' %}" {% endif %}>Add Post</a></li>
+        </ul>
+        <ul class="navbar-menu navbar-right">
+            {% if request.user.is_authenticated %} 
+            <li><a href="{% url 'logout' %}" class="login-btn">Logout</a></li>            
+            {%else%} 
+            <li><a href="{% url 'login' %}" class="login-btn">Register/Login</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    
+    
+    {% if cats %}
+    <nav>
+        <ul class="catmenu">
+            <li><a {% if not category.name %} class="active" {%else%} href="{% url 'home' %}"  {% endif %}>All</a></li>
+            {% for cat in cats %}                    
+            <li><a {% if cat.name == category.name %} class="active" {%else%} href="{{cat.get_absolute_url}}" {% endif %}>{{cat.name}}</a></li>
+            {% endfor %}
+            
+        </ul>
+    </nav>
+    {% endif %}
+    {% endblock mainmenu %}
+    <section class="content">
+        {% block content %}
+        {% endblock %}
+        {% if page_obj.has_other_pages %}
+	<nav class="list-pages">
+		<ul>
+			{% if page_obj.has_previous %}
+			<li class="page-num">
+				<a href="?page={{ page_obj.previous_page_number }}">&lt;</a>
+			</li>
+			{% endif %}
+					{% for p in paginator.page_range %}
+					{% if page_obj.number == p %}
+					<li class="page-num page-num-selected">{{ p }}</li>
+					{% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2  %}
+					<li class="page-num">
+						<a href="?page={{ p }}">{{ p }}</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+
+			{% if page_obj.has_next %}
+			<li class="page-num">
+				<a href="?page={{ page_obj.next_page_number }}">&gt;</a>
+			</li>
+			{% endif %}
+		</ul>
+	</nav>
+{% endif %}
+    </section>
+
+    <div id="footer">
+		<p>&copy; 2025 Tursunov Nodirbekga tegishli</p>
+	</div>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'cars/base.html' %}
+
+{% block content %}
+<div class="cars-list">
+    <div class='car-detail-block'>
+        <div>
+            <img src="{{car.photo.url}}"  class="car-photo" alt="">
+        </div>
+        <div>
+            <h4>{{car.brand}}</h4>
+            <h5>{{car.model}}</h5>
+            {% autoescape on %}
+            <p>{{car.description|linebreaks}}</p>
+            {% endautoescape %}
+            <p>Made in {{car.year}}</p>
+        </div>
+    </div>
+    <br>
+    <hr>
+</div>
+
+
+{% endblock %}
