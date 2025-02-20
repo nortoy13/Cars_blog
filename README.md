@@ -1,2 +1,3 @@
-# Cars_blog
-This is cars blog website created by using django
+view site
+https://nodirbek133.pythonanywhere.com
+
